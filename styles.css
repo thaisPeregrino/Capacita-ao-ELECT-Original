@@ -1,0 +1,212 @@
+*{
+    margin: 0px;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    color: crimson;
+    
+
+}
+@font-face {
+    font-family: Golden ;
+    src: url(font/GoldenHillsDEMO.ttf);
+}
+.flex img {
+    max-width: 100%;
+    display: block;
+}
+.grid1 img {
+    max-width: 100%;
+    display: block;
+}
+nav img{
+    width: 60px;
+    padding-left: 50px;
+}
+nav{
+    background-color: LightPink;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px 10px 0px;
+    position: fixed;
+    width: 100%;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+}
+nav ul li{
+    list-style: none;
+    font-family: Golden;
+    font-size: 18px;
+    padding: 0px 20px 0px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    transition: 0.5s;
+    
+}
+nav ul li a:hover{
+    
+    color: black;
+    border-bottom: solid 1px black
+}
+.home{
+    background-image: url(imagens/WhatsApp\ Image\ 2022-10-19\ at\ 13.41.21.jpeg) ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 50px 20px 50px;
+
+}
+
+.imagem img{
+    width: 100%;
+    max-width: 500px;
+}
+.imagem{
+    text-align: center;
+}
+.titulo{
+    width: 100%;
+    font-size: 50px;
+    
+}
+
+.texto2{
+    background-color: LightPink;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.texto2 h1{
+    padding: 20px;
+}
+.texto2 p{
+    font-family: Golden ;
+    font-size: 25px;
+}
+
+.texto3{
+    background-color: PaleVioletRed;
+    padding-top: 30px;
+    text-align: center;
+}
+.texto4{
+    background-color: LightPink;
+    text-align: center;
+    height: 380px;
+}
+.texto4 h1{
+    padding: 20px;
+}
+.texto5{
+    background-color:PaleVioletRed;
+    text-align: center;
+
+}
+.texto5 h1{
+    padding: 20px;
+}
+.texto5 h3{
+    padding: 10px;
+    font-family: Golden ;
+}
+.rodapé h5{
+    color: black;
+}
+.rodapé{
+    display: flex;
+
+}
+.rodapé img{
+    display: flex;
+    width: 60px;
+}
+/* CSS flexbox */
+
+.flex {
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flex>div {
+    flex: 1 1 200px;
+    margin: 10px;
+
+}
+/* CSS GRID 1 */
+
+.grid1 {
+    padding: 10px;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 780px;
+    margin: 0 auto;
+    grid-gap: 20px;
+}
+
+.grid1 > div:nth-child(n + 4){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    
+}
+.grid1 > div.anuncio {
+    grid-column: 1;
+    grid-row: 2 / 5;
+    display: block;
+}
+@media (max-width:600px) {
+    .grid1{
+        grid-template-columns: 1fr 1fr;
+    }
+    .grid1 > div:nth-child(n + 4){
+        display:block
+    }
+    .grid1 > div.anuncio {
+        grid-column: auto;
+        grid-row: auto;
+        order: -1;
+    }
+    
+}
+
+/* carosel */
+.slider-item img{
+    width: 250px;
+
+}
+.slider{
+    overflow: hidden;
+
+}
+.slider > .slider-content{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    transition: all 500ms ease;
+}
+.slider > .slider-content > .slider-item {
+    flex: 0 0 auto;
+    width: 100%;;
+}
+
+.slider > input:nth-child(1):checked ~ .slider-content{
+    transform: translateX(0%);
+}
+
+.slider > input:nth-child(2):checked ~ .slider-content{
+    transform: translateX(-100%);
+}
+.slider > input:nth-child(3):checked ~ .slider-content{
+    transform: translateX(-200%);
+}
+
+.slider > input:nth-child(4):checked ~ .slider-content{
+    transform: translateX(-300%);
+}
